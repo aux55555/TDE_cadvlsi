@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"TDE_testbench_func_synth.v" \
+"../../../../../cadvlsi_final.srcs/sim_1/imports/Desktop/TDE_testbench.v" \
+
+# Do not sort compile order
+nosort

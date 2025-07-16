@@ -1,0 +1,236 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Wed Jan 15 01:22:52 2025
+| Host         : DESKTOP-48295JR running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TDE_control_sets_placed.rpt
+| Design       : TDE
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   158 |
+|    Minimum number of control sets                        |   158 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   158 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   154 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              30 |           12 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            2478 |         1349 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+--------------------------+------------------+------------------+----------------+--------------+
+|   Clock Signal  |       Enable Signal      | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+--------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG  | busy_i_1_n_0             | rst_IBUF         |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG  | max_k                    | rst_IBUF         |                2 |              8 |         4.00 |
+|  display/p_0_in |                          | rst_IBUF         |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG  | cnt__0                   | rst_IBUF         |                7 |             13 |         1.86 |
+|  clk_IBUF_BUFG  | x_buffer[89][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | R_max[15]_i_1_n_0        | rst_IBUF         |                2 |             16 |         8.00 |
+|  clk_IBUF_BUFG  | d[7]_i_1_n_0             | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[94][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[0][7]_i_1_n_0   | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[100][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[101][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[102][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer                 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[130][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[106][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[121][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[133][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[120][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[140][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[137][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[141][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[142][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[110][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[104][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[111][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[144][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[134][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[125][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[129][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[126][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[115][7]_i_1_n_0 | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[103][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[12][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[131][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[138][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[11][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[143][7]_i_1_n_0 | rst_IBUF         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG  | x_buffer[105][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[117][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[122][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[145][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[119][7]_i_1_n_0 | rst_IBUF         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG  | x_buffer[136][7]_i_1_n_0 | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[116][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[10][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[108][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[118][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[123][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[127][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[107][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[109][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[112][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[132][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[135][7]_i_1_n_0 | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[124][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[139][7]_i_1_n_0 | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[113][7]_i_1_n_0 | rst_IBUF         |               12 |             16 |         1.33 |
+|  clk_IBUF_BUFG  | x_buffer[128][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[13][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[114][7]_i_1_n_0 | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[148][7]_i_1_n_0 | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[29][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[1][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[15][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[16][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[17][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[147][7]_i_1_n_0 | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[20][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[23][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[26][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[35][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[38][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[42][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[18][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[146][7]_i_1_n_0 | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[25][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[28][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[30][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[21][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[24][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[39][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[2][7]_i_1_n_0   | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[34][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[14][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[31][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[40][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[43][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[3][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[41][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[32][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[37][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[22][7]_i_1_n_0  | rst_IBUF         |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG  | x_buffer[27][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[44][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[46][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[36][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[47][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[48][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[49][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[19][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[33][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[45][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[63][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[65][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[50][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[61][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[69][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[76][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[58][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[80][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[64][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[75][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[79][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[81][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[68][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[82][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[83][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[73][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[54][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[60][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[6][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[70][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[57][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[52][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[62][7]_i_1_n_0  | rst_IBUF         |               14 |             16 |         1.14 |
+|  clk_IBUF_BUFG  | x_buffer[51][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[67][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[55][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[71][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[72][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[74][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[66][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[78][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[77][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[4][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[59][7]_i_1_n_0  | rst_IBUF         |               13 |             16 |         1.23 |
+|  clk_IBUF_BUFG  | x_buffer[7][7]_i_1_n_0   | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[56][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[53][7]_i_1_n_0  | rst_IBUF         |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG  | x_buffer[5][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[8][7]_i_1_n_0   | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[92][7]_i_1_n_0  | rst_IBUF         |                6 |             16 |         2.67 |
+|  clk_IBUF_BUFG  | x_buffer[93][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[98][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[87][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[95][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[88][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  | x_buffer[9][7]_i_1_n_0   | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[96][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[97][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[99][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[90][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[91][7]_i_1_n_0  | rst_IBUF         |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG  | x_buffer[86][7]_i_1_n_0  | rst_IBUF         |                7 |             16 |         2.29 |
+|  clk_IBUF_BUFG  | x_buffer[85][7]_i_1_n_0  | rst_IBUF         |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG  | x_buffer[84][7]_i_1_n_0  | rst_IBUF         |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG  |                          | rst_IBUF         |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG  | calc_cnt                 | rst_IBUF         |               18 |             23 |         1.28 |
++-----------------+--------------------------+------------------+------------------+----------------+--------------+
+
+

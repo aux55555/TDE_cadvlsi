@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../cadvlsi_final.srcs/sources_1/imports/Desktop/TDE_design.v" \
+"../../../../cadvlsi_final.srcs/sim_1/imports/Desktop/TDE_testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
